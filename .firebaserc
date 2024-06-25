@@ -1,0 +1,10 @@
+{
+  "projects": {
+    "default": "netflixgpt-c0af4",
+    "prod": "netflixgpt-c0af4",
+    "staging": "netflixgpt-c0af4"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}

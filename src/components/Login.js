@@ -7,17 +7,16 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase"; //authentication should be done at the top before the components
-import { useNavigate } from "react-router-dom";
+
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { USER_PHOTO_URL } from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
 
   const dispatch = useDispatch((store) => store.user);
-
-  const navigate = useNavigate();
 
   const email = useRef(null);
   const password = useRef(null);
@@ -42,7 +41,7 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL: "https://avatars.githubusercontent.com/u/15861268?v=4",
+            photoURL: USER_PHOTO_URL,
           })
             .then(() => {
               const { uid, email, displayName, photoURL } = auth.currentUser;
@@ -54,7 +53,6 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-              navigate("/browse");
               // ...
             })
             .catch((error) => {
@@ -76,7 +74,6 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          navigate("/browse");
           console.log(user);
 
           // ...

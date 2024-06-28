@@ -11,6 +11,14 @@
     - create signup user account in firebase
     - implement signin user api firebase
     - created redux store with userSlice
+    - implemented signout
+    - update profile
+    - BugFix: signup user displayName and profile picture update
+    - BUgFix: if the user is not logged in redirect to /login, if logged in then to /browse and vice versa.
+    - Unsubscribed to the onAuthStateChanged callback inside useEffect
+    - Use TMDB apis to get data and videos of movies
+    - Created custom hooks to make our code modular
+    - Embedded youtube video to play in the background
 
 # Features
 
@@ -29,3 +37,5 @@
     -NetflixGPT
         -searchBar
         -Movie suggestions
+
+1.07 remaining time

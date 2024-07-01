@@ -19,6 +19,8 @@
     - Use TMDB apis to get data and videos of movies
     - Created custom hooks to make our code modular
     - Embedded youtube video to play in the background
+    - Added multi langauge support in the search bar
+    - Integrate GPT APIs(OpenAI)
 
 # Features
 
@@ -37,5 +39,3 @@
     -NetflixGPT
         -searchBar
         -Movie suggestions
-
-1.07 remaining time

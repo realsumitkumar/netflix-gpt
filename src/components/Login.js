@@ -74,7 +74,6 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log(user);
 
           // ...
         })
@@ -89,13 +88,17 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <div className="absolute">
-        <img src={LOGIN_PAGE_BACKGROUND} alt="bg-netflix" />
+      <div className="absolute -z-10 w-full">
+        <img
+          className="h-screen object-cover w-full"
+          src={LOGIN_PAGE_BACKGROUND}
+          alt="bg-netflix"
+        />
       </div>
       <div>
         <form
           onSubmit={(e) => e.preventDefault()}
-          className="absolute w-4/12 border p-12 bg-black bg-opacity-70 my-36 mx-auto left-0 right-0 rounded-2xl text-white"
+          className="absolute md:w-4/12 border p-12 bg-black bg-opacity-70 my-36 mx-auto left-0 right-0 rounded-2xl text-white"
         >
           <p className="text-red-500 font-bold mx-2 p-1 text-center">
             {errorMessage}

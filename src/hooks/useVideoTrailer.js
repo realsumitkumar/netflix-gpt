@@ -5,6 +5,7 @@ import { useEffect } from "react";
 
 const useVideoTrailer = (movieId) => {
   const dispatch = useDispatch();
+  const trailerVideo = useSelector((store) => store.movies.trailerVideo);
 
   const getMovieTrailer = async () => {
     const data = await fetch(
@@ -22,7 +23,7 @@ const useVideoTrailer = (movieId) => {
   };
 
   useEffect(() => {
-    getMovieTrailer();
+    !trailerVideo && getMovieTrailer();
   }, []);
 };
 

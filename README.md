@@ -20,7 +20,9 @@
     - Created custom hooks to make our code modular
     - Embedded youtube video to play in the background
     - Added multi langauge support in the search bar
-    - Integrate GPT APIs(OpenAI)
+    - Integrate Gemini APIs to recommend movies
+    - Memoization
+    - Made website responsive
 
 # Features
 

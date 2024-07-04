@@ -3,6 +3,7 @@ import { TMDB_IMG_URL } from "../utils/constants";
 
 const MovieCard = ({ poster_path }) => {
   if (!poster_path) return null;
+
   return (
     <div className="w-28 md:w-36 m-1 rounded-lg border hover:border-gray-600 cursor-pointer border-gray-500 hover:opacity-50">
       <img

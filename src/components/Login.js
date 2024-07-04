@@ -133,7 +133,7 @@ const Login = () => {
             {isSignInForm ? "Sign In" : "Sign Up"}
           </button>
           <p
-            className="p-2 mx-2 cursor-pointer"
+            className="text-center cursor-pointer hover:underline hover:text-blue-500"
             onClick={() => setIsSignInForm(!isSignInForm)}
           >
             {isSignInForm

@@ -1,4 +1,5 @@
 # NetflixGPT
+## Link - https://sumit-netflixgpt.vercel.app/
 
     - create-react-app
     - configured tailwindCSS
